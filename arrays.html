@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    // array
+    // [1,2,3,4,5,6,7,8,9,10]
+
+    // let arr = ['a','b','c','d','e','f']
+    // console.log(arr)
+
+    // index and count from 0
+    // arr[2]
+    // this will give you c
+
+    // add an item to array
+    // arr.push('g')
+
+    let myFavs = ['avengers', 'awake', 'zelda', 'sushi' ]
+    let userFavs = []
+
+    userFavs.push(prompt('Enter your favorite movie'))
+    if (myFavs[0] === userFavs[0]) {
+      alert("That's is my favorite too!")
+    }
+    userFavs.push(prompt('Enter your favorite song'))
+    if (myFavs[1] === userFavs[1]) {
+      alert("That's is my favorite too!")
+    }
+    userFavs.push(prompt('Enter your favorite game'))
+    if (myFavs[2] === userFavs[2]) {
+      alert("That's is my favorite too!")
+    }
+    userFavs.push(prompt('Enter your favorite sushi'))
+    if (myFavs[3] === userFavs[3]) {
+      alert("That's is my favorite too!")
+    }
+
+    console.log(`
+    My Favorites:
+    ------------
+    Movie: ${myFavs[0]}
+    Song: ${myFavs[1]}
+    Game: ${myFavs[2]}
+    Food: ${myFavs[3]}
+    ------------
+
+    
+    Your Favorites:
+    ------------
+    Movie: ${userFavs[0]}
+    Song: ${userFavs[1]}
+    Game: ${userFavs[2]}
+    Food: ${userFavs[3]}
+    ------------
+    `)
+
+
+  </script>
+
+
+</body>
+
+</html>

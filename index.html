@@ -7,8 +7,9 @@
 </head>
 <body>
 
-  <div id="myDiv"></div>
-  
+  <!-- <div id="myDiv"></div> -->
+  <div id="favs"></div>
+
 
   <script>
     let favMov = 'avengers'
@@ -59,7 +60,31 @@ Food: ${favFood}
 -----------------
 `)
 
-document.getElementById('myDiv').innerHTML = `
+// document.getElementById('myDiv').innerHTML = `
+// My favorites:
+// <br>
+// -----------------
+// <br>
+// <br>Movie: ${favMov}
+// <br>Song: ${favSong}
+// <br>Game: ${favGame}
+// <br>Food: ${favFood}
+// <br>-----------------
+// <br>
+// <br>Your favorites:
+// <br>-----------------
+// <br>Movie: ${userfavMov}
+// <br>Song: ${userfavSong}
+// <br>Game: ${userfavGame}
+// <br>Food: ${userfavFood}
+// <br>-----------------
+// `
+
+
+// creating divs AFTER the js
+let myFavsElem = document.createElement('div')
+myFavsElem.id = 'myFavs'
+myFavsElem.innerHTML = `
 My favorites:
 <br>
 -----------------
@@ -68,8 +93,10 @@ My favorites:
 <br>Song: ${favSong}
 <br>Game: ${favGame}
 <br>Food: ${favFood}
-<br>-----------------
-<br>
+`
+let yourFavsElem = document.createElement('div')
+yourFavsElem.id = 'yourFavs'
+yourFavsElem.innerHTML = `
 <br>Your favorites:
 <br>-----------------
 <br>Movie: ${userfavMov}
@@ -78,9 +105,8 @@ My favorites:
 <br>Food: ${userfavFood}
 <br>-----------------
 `
-
-
-
+document.getElementById('favs').append(myFavsElem)
+document.getElementById('favs').append(yourFavsElem)
 
 
   </script>

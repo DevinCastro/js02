@@ -6,6 +6,8 @@
   <title>Document</title>
 </head>
 <body>
+
+  <div id="myDiv"></div>
   
 
   <script>
@@ -32,7 +34,7 @@
     let userfavFood = prompt('Enter your favorite food')
     if (favGame === userfavGame) {
         alert("That's is my favorite too!")
-      }
+      }  
 
     // console.log('My favorite movie is ' + favMov)
     // console.log('My favorite song is ' + favSong)
@@ -56,6 +58,26 @@ Game: ${favGame}
 Food: ${favFood}
 -----------------
 `)
+
+document.getElementById('myDiv').innerHTML = `
+My favorites:
+<br>
+-----------------
+<br>
+<br>Movie: ${favMov}
+<br>Song: ${favSong}
+<br>Game: ${favGame}
+<br>Food: ${favFood}
+<br>-----------------
+<br>
+<br>Your favorites:
+<br>-----------------
+<br>Movie: ${userfavMov}
+<br>Song: ${userfavSong}
+<br>Game: ${userfavGame}
+<br>Food: ${userfavFood}
+<br>-----------------
+`
 
 
 
